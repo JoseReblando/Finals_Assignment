@@ -590,6 +590,14 @@ p {
   border-left: 3px solid var(--accent);
 }
 
+.submission-timestamp {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  margin: 1rem 0;
+  text-align: center;
+  font-style: italic;
+}
+
 .thank-you-msg {
   color: var(--text-secondary);
   font-style: italic;

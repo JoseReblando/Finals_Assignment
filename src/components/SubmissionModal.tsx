@@ -14,7 +14,7 @@ export default function SubmissionModal({ submission, onClose }: SubmissionModal
       <div className={`modal-content theme-${theme}`} onClick={(e) => e.stopPropagation()}>
         <div className="modal-header">
           <h2>✓ Message Received!</h2>
-          <button className="modal-close" onClick={onClose}>×</button>
+          <button className="modal-close" onClick={onClose} aria-label="Close modal">×</button>
         </div>
         <div className="modal-body">
           <div className="submission-detail">
@@ -25,6 +25,9 @@ export default function SubmissionModal({ submission, onClose }: SubmissionModal
             <label>Message:</label>
             <p className="message-content">{submission.message}</p>
           </div>
+          <p className="submission-timestamp">
+            Submitted at: {new Date().toLocaleString()}
+          </p>
           <p className="thank-you-msg">Thank you for reaching out! I'll get back to you soon.</p>
         </div>
         <div className="modal-footer">
